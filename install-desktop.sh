@@ -19,6 +19,7 @@ for name,binary,title,terminal in [
  p=apps/(name+'.desktop')
  if p.exists():
   backup=root/'backups'/('desktop-'+time.strftime('%Y%m%d-%H%M%S')+'-'+p.name)
+  backup.parent.mkdir(parents=True,exist_ok=True)
   shutil.copy2(p,backup)
  p.write_text('[Desktop Entry]\nType=Application\nName='+title+'\nComment=Offline Litmo rooms and Soft Signal\nExec='+quote(prefix/'bin'/binary)+'\nTryExec='+str(prefix/'bin'/binary)+'\nIcon=org.softnessasstrength.Cuddle\nTerminal='+str(terminal).lower()+'\nCategories=Utility;\nKeywords=Litmo;Soft Signal;consent;local;\nStartupNotify=true\n')
  p.chmod(0o644)
