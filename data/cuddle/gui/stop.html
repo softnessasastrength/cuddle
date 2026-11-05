@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>cuddle — Soft Signal</title>
+  <meta name="referrer" content="no-referrer">
+  <!-- Local CSS only. No remote stylesheets. Color is not the only cue: the
+       control is labeled STOP (S / stop). -->
+  <style>
+    :root {
+      --bg: #14110f;
+      --ink: #f4efe6;
+      --mute: #b7a999;
+      --stop: #c45c4a;
+      --stop-ink: #fff7f2;
+      --field: #1c1916;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0; height: 100%;
+      background: var(--bg); color: var(--ink);
+      font: 18px/1.45 ui-sans-serif, system-ui, sans-serif;
+    }
+    body { display: flex; align-items: center; justify-content: center; }
+    .wrap { width: min(42rem, calc(100% - 2rem)); text-align: center; }
+    .kicker {
+      letter-spacing: 0.14em; text-transform: uppercase;
+      font-size: 0.72rem; color: var(--mute); margin-bottom: 1.2rem;
+    }
+    h1 { font-weight: 600; font-size: clamp(1.4rem, 4vw, 2rem); margin: 0 0 0.6rem; }
+    p { color: var(--mute); margin: 0 0 1.8rem; }
+    button.stop {
+      appearance: none; border: 0; cursor: pointer;
+      width: min(100%, 22rem); min-height: 22rem;
+      border-radius: 50%;
+      background: var(--stop); color: var(--stop-ink);
+      font-size: clamp(2.4rem, 8vw, 4.2rem); font-weight: 700;
+      letter-spacing: 0.08em;
+      box-shadow: 0 0 0 12px rgba(196, 92, 74, 0.18);
+    }
+    button.stop:focus-visible { outline: 3px solid var(--ink); outline-offset: 8px; }
+    button.stop:hover { filter: brightness(1.05); }
+    .fine { margin-top: 1.6rem; font-size: 0.85rem; }
+    .field {
+      display: none; min-height: 70vh; align-items: center; justify-content: center;
+      flex-direction: column; gap: 0.8rem;
+    }
+    body.ended { background: var(--field); }
+    body.ended .live { display: none; }
+    body.ended .field { display: flex; }
+    .field h2 { font-size: clamp(2rem, 6vw, 3.4rem); font-weight: 500; margin: 0; }
+    .field p { max-width: 28rem; }
+    .again {
+      margin-top: 1.4rem; background: transparent; color: var(--ink);
+      border: 1px solid #6d645a; border-radius: 999px;
+      padding: 0.55rem 1.1rem; cursor: pointer; font: inherit;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      button.stop { box-shadow: none; }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap live">
+    <div class="kicker">cuddle · local · nothing stored</div>
+    <h1>Soft Signal</h1>
+    <p>Ends immediately. No explanation. No penalty.<br>Stopping safely is success.</p>
+    <button class="stop" type="button" id="stop" autofocus title="S stop">STOP</button>
+    <p class="fine">Esc or Q also fires. This is not emergency services.<br>Not therapy. Not a product. Not a network.</p>
+  </main>
+  <section class="field" id="field">
+    <div class="kicker">soft signal fired</div>
+    <h2>Ended.</h2>
+    <p>No explanation. No penalty. Not a failure.<br>You can come back later, or not.</p>
+    <button class="again" type="button" id="again">return</button>
+  </section>
+  <script>
+    (function () {
+      var body = document.body;
+      function fire() {
+        body.classList.add("ended");
+        document.getElementById("again").focus();
+      }
+      function reset() {
+        body.classList.remove("ended");
+        document.getElementById("stop").focus();
+      }
+      document.getElementById("stop").addEventListener("click", fire);
+      document.getElementById("again").addEventListener("click", reset);
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape" || e.key === "q" || e.key === "Q") {
+          e.preventDefault();
+          if (body.classList.contains("ended")) reset();
+          else fire();
+        }
+        if (e.key === "Enter" && !body.classList.contains("ended")) fire();
+      });
+    })();
+  </script>
+</body>
+</html>

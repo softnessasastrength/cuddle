@@ -1,0 +1,38 @@
+name: build
+on: [push, pull_request]
+jobs:
+  meson:
+    runs-on: ubuntu-24.04
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - name: default
+            tui: python
+            gui: html
+          - name: native
+            tui: curses
+            gui: gtk
+          - name: qt
+            tui: python
+            gui: qt
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install build dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y build-essential meson ninja-build pkgconf python3 libgtk-4-dev libncurses-dev qt6-base-dev gettext xvfb xauth
+      - name: Check shared catalog
+        run: python3 tools/generate-rooms.py --check
+      - name: Configure
+        run: >-
+          meson setup builddir --prefix="${PWD}/stage" --libdir=lib
+          -Dtui=enabled -Dgui=enabled
+          -Dtui_toolkit=${{ matrix.tui }} -Dgui_toolkit=${{ matrix.gui }}
+          -Dplugins=disabled -Dtests=enabled -Di18n=auto
+      - run: meson compile -C builddir
+      - name: Unit and widget tests
+        run: xvfb-run -a meson test -C builddir --print-errorlogs
+      - run: meson install -C builddir
+      - name: Staged terminal and dispatch tests
+        run: python3 tests/smoke_frontends.py --prefix stage --tui ${{ matrix.tui }} --gui ${{ matrix.gui }}

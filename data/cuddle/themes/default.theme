@@ -1,0 +1,9 @@
+# Local theme. letter and word are required (color is never the only cue).
+# attr is optional. No URLs. No network.
+header = H header
+signal = S stop reverse
+flood = F flood
+touch_w = W welcomed
+touch_a = A ask-first
+touch_s = S soft-limit
+touch_x = X off-limits

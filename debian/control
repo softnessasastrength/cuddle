@@ -1,0 +1,66 @@
+Source: cuddle
+Section: misc
+Priority: optional
+Maintainer: Softness as Strength <thatcomputergeek021800@gmail.com>
+Homepage: https://softnessasastrength.com/
+Standards-Version: 4.7.2
+Rules-Requires-Root: no
+Build-Depends:
+ debhelper-compat (= 13),
+ meson (>= 0.61.0),
+ ninja-build,
+ pkgconf,
+ python3,
+ libgtk-4-dev,
+ libncurses-dev,
+
+Package: libcuddle0
+Section: libs
+Architecture: any
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: cuddle core library
+ libcuddle holds version, datadir paths, the protocol catalog, themes,
+ and optional XDG preferences. soversion 0: ABI is not frozen.
+ Nothing is stored or sent.
+
+Package: libcuddle-dev
+Section: libdevel
+Architecture: any
+Depends: libcuddle0 (= ${binary:Version}), ${misc:Depends}
+Description: development files for libcuddle
+ Headers and pkg-config for libcuddle. Plugin ABI is documented but
+ the loader stays disabled until soversion 1.
+
+Package: cuddle-data
+Architecture: all
+Multi-Arch: foreign
+Depends: ${misc:Depends}
+Recommends: python3
+Description: arch-independent data for cuddle
+ Bash engine, themes, TUI script, and the local Soft Signal HTML page
+ installed under /usr/share/cuddle.
+
+Package: cuddle
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libcuddle0 (= ${binary:Version}), cuddle-data (>= ${source:Version})
+Recommends: cuddle-tui, cuddle-gui
+Description: consent-first local companion (CLI)
+ Local, file-less companion. Soft Signal (q) needs no explanation.
+ The CLI dispatches to shared offline Litmo rooms and the bash engine.
+ Not therapy. Not a product. Nothing is stored or sent.
+
+Package: cuddle-tui
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libcuddle0 (= ${binary:Version}), cuddle-data (>= ${source:Version})
+Description: terminal frontend for cuddle
+ Ncurses containment hub. q is Soft Signal. Touch Language is a map,
+ never consent.
+
+Package: cuddle-gui
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libcuddle0 (= ${binary:Version}), cuddle-data (>= ${source:Version})
+Description: offline Litmo room hub for cuddle
+ GTK4 hub for flood, touch mapping, conflict practice, morning, spooning,
+ parallel play and aftercare. Shared preferences and a free Soft Signal.
+ No network, scoring, haptics, or saved room answers.

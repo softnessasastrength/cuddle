@@ -1,0 +1,4 @@
+# libcuddle's Debian contract uses --libdir=lib.  Keep the unstable ABI
+# library under /usr/lib; the .pc metadata is separately installed under the
+# host multiarch pkg-config directory for cross-compilation discovery.
+libcuddle0: arch-dependent-file-not-in-arch-specific-directory [usr/lib/libcuddle.so.1.4.0]

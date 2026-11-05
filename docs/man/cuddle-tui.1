@@ -1,0 +1,17 @@
+.TH CUDDLE-TUI 1 "2026-11-04" "cuddle 1.3.0" "User Commands"
+.SH NAME
+cuddle-tui \- offline Litmo terminal room hub
+.SH SYNOPSIS
+.B cuddle-tui
+.RI [ hub | signal | ROOM_ID ]
+.SH DESCRIPTION
+The Python and ncurses backends use the same libcuddle room engine.
+Run cuddle --rooms for room IDs. An interactive terminal is required.
+.SH CONTROLS
+Up/down or j/k selects. Enter or space chooses. Numbers 1 through 6
+choose step options. b goes back; Page Up/Down scrolls.
+q or Escape stops. A second stop key leaves the stop screen.
+Nothing is saved. Touch Language is a map, never consent.
+.SH SEE ALSO
+.BR cuddle (1),
+.BR cuddle-gui (1)

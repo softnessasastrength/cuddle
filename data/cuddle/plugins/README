@@ -1,0 +1,8 @@
+Drop libcuddle plugin .so files here ($datadir/cuddle/plugins).
+User overlay: $XDG_DATA_HOME/cuddle/plugins (or ~/.local/share/cuddle/plugins).
+
+Export cuddle_plugin_get_v1() as documented in cuddle-plugin.h.
+abi must be CUDDLE_PLUGIN_ABI (1). Newer major is refused.
+Plugins must not disable Soft Signal.
+
+Loader is compiled only with -Dplugins=enabled (default off until soversion 1).

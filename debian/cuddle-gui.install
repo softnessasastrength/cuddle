@@ -1,0 +1,5 @@
+usr/bin/cuddle-gui
+usr/share/man/man1/cuddle-gui.1
+usr/share/applications/org.softnessasstrength.Cuddle.desktop
+usr/share/metainfo/org.softnessasstrength.Cuddle.metainfo.xml
+usr/share/icons/hicolor/scalable/apps/org.softnessasstrength.Cuddle.svg

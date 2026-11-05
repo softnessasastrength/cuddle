@@ -1,0 +1,14 @@
+#pragma once
+#mesondefine CUDDLE_VERSION
+#mesondefine CUDDLE_PREFIX
+#mesondefine CUDDLE_BINDIR
+#mesondefine CUDDLE_DATADIR
+#mesondefine CUDDLE_PYTHON
+#mesondefine CUDDLE_LOCALEDIR
+#mesondefine CUDDLE_GETTEXT_DOMAIN
+#mesondefine CUDDLE_HAS_CLI
+#mesondefine CUDDLE_HAS_TUI
+#mesondefine CUDDLE_HAS_GUI
+#mesondefine CUDDLE_HAS_PLUGINS
+#mesondefine CUDDLE_HAS_USER_CONFIG
+#mesondefine CUDDLE_HAS_I18N

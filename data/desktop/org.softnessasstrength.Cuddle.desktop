@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Cuddle
+Comment=Offline Litmo rooms and Soft Signal
+Exec=cuddle-gui
+Icon=org.softnessasstrength.Cuddle
+Terminal=false
+Categories=Utility;
+Keywords=Litmo;Soft Signal;consent;local;

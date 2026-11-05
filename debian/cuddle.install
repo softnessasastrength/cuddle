@@ -1,0 +1,4 @@
+usr/bin/cuddle
+usr/share/man/man1/cuddle.1
+usr/share/doc/cuddle/cuddle.conf.example
+usr/share/bash-completion/completions/cuddle

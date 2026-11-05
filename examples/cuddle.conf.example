@@ -1,0 +1,18 @@
+# Optional XDG config for cuddle.
+# Loading settings never writes this file. Missing file = defaults.
+# GTK Save preferences explicitly writes display/startup settings only.
+#
+# Copy to $XDG_CONFIG_HOME/cuddle/cuddle.conf
+# (or ~/.config/cuddle/cuddle.conf).
+#
+# theme = default
+# datadir_override =
+# browser =
+# tui_screen = hub
+# Shared across GTK4, Qt6, CLI, and both TUIs:
+# appearance: system, light, or dark
+# appearance = system
+# true makes GUI text larger and terminal paragraphs roomier
+# large_text = false
+# hub or a room ID from cuddle --rooms
+# start_room = hub

@@ -1,0 +1,41 @@
+# Feature flags. Packagers pass -Dname=enabled|disabled|auto.
+# Do not put distro package names in this file.
+
+option('cli', type: 'feature', value: 'enabled',
+       description: 'Build the cuddle CLI')
+
+option('tui', type: 'feature', value: 'auto',
+       description: 'Build cuddle-tui')
+
+option('tui_toolkit', type: 'combo', choices: ['python', 'curses'], value: 'python',
+       description: 'cuddle-tui backend: python (exec tui.py) or curses (dependency(ncursesw/ncurses))')
+
+option('gui', type: 'feature', value: 'auto',
+       description: 'Build cuddle-gui (opens local HTML via xdg-open/$BROWSER)')
+
+option('gui_toolkit', type: 'combo', choices: ['html', 'gtk', 'qt'], value: 'html',
+       description: 'cuddle-gui backend: html, gtk (gtk4), or qt (Qt6Widgets)')
+
+option('docs', type: 'feature', value: 'enabled',
+       description: 'Install man pages')
+
+option('tests', type: 'feature', value: 'auto',
+       description: 'Build unit tests')
+
+option('bash_engine', type: 'boolean', value: true,
+       description: 'Install bash protocol data under datadir/cuddle')
+
+option('plugins', type: 'feature', value: 'disabled',
+       description: 'dlopen $datadir/cuddle/plugins and XDG plugins (off until soversion 1)')
+
+option('plugin_examples', type: 'boolean', value: false,
+       description: 'Build examples/plugins/hello.so in the build dir (never installed)')
+
+option('user_config', type: 'feature', value: 'enabled',
+       description: 'Read optional XDG cuddle.conf (never writes)')
+
+option('i18n', type: 'feature', value: 'auto',
+       description: 'gettext catalogs in po/ via Meson localedir')
+
+option('pkgconfigdir', type: 'string', value: '',
+       description: 'pkg-config install directory relative to prefix (empty uses libdir/pkgconfig)')

@@ -1,0 +1,1398 @@
+{
+  "schema": 1,
+  "rooms": [
+    {
+      "id": "flood",
+      "title": "Flood Protocol",
+      "summary": "Body first. Words optional. No essays.",
+      "kind": "steps",
+      "steps": [
+        {
+          "title": "STOP",
+          "body": "You do not have to finish the thought, the text, or the build spiral. Soft Signal free.",
+          "choices": []
+        },
+        {
+          "title": "BODY",
+          "body": "Feet on floor. Let your body settle if you can. Skip anything that does not work for you.",
+          "choices": []
+        },
+        {
+          "title": "WATER",
+          "body": "One animal need: water, snack, cold water on face, or blanket. Pick one, or skip.",
+          "choices": []
+        },
+        {
+          "title": "DELAY",
+          "body": "Delay is care, not exile. Give yourself time before sending a raw dump to another person.",
+          "choices": []
+        },
+        {
+          "title": "SOFT",
+          "body": "Soft Signal is free even from yourself. You can leave this room too.",
+          "choices": []
+        },
+        {
+          "title": "LATER",
+          "body": "When quieter: Conflict Practice, Want or Should, or Aftercare. Not now.",
+          "choices": []
+        }
+      ]
+    },
+    {
+      "id": "touch",
+      "title": "Touch Language",
+      "summary": "A map, never consent. Every zone starts off limits.",
+      "kind": "touch",
+      "steps": []
+    },
+    {
+      "id": "conflict",
+      "title": "Conflict Practice",
+      "summary": "A solo rehearsal. No winning, grading, or messages sent.",
+      "kind": "steps",
+      "steps": [
+        {
+          "title": "Choose a rehearsal",
+          "body": "Because “we need to talk” can feel like a court summons issued by childhood. This is practice, never a real partner agreement.",
+          "choices": [
+            {
+              "label": "Solo rehearsal",
+              "target": 1,
+              "signal": 0,
+              "value": 0
+            },
+            {
+              "label": "Repair script",
+              "target": 4,
+              "signal": 0,
+              "value": 0
+            },
+            {
+              "label": "Already flooded",
+              "target": 5,
+              "signal": 0,
+              "value": 0
+            },
+            {
+              "label": "Soft Signal first",
+              "target": -2,
+              "signal": 0,
+              "value": 0
+            }
+          ]
+        },
+        {
+          "title": "Body check",
+          "body": "Notice chest, throat, stomach, jaw, numbness, or “unknown”. No answer has to be typed. Words can wait.",
+          "choices": []
+        },
+        {
+          "title": "Try an I-statement",
+          "body": "When __ happens, I feel __ in my body, and I need __. I’m not saying you’re bad. Say it to yourself or leave the blanks.",
+          "choices": []
+        },
+        {
+          "title": "Pick a move",
+          "body": "No message is sent. A pause or a later conversation is a valid move.",
+          "choices": [
+            {
+              "label": "Ask, when both people want to talk",
+              "target": -1,
+              "signal": 0,
+              "value": 0
+            },
+            {
+              "label": "Pause / decide later",
+              "target": -1,
+              "signal": 0,
+              "value": 0
+            },
+            {
+              "label": "Reschedule",
+              "target": -1,
+              "signal": 0,
+              "value": 0
+            },
+            {
+              "label": "Soft Signal",
+              "target": -2,
+              "signal": 0,
+              "value": 0
+            }
+          ]
+        },
+        {
+          "title": "Repair script",
+          "body": "I’m back. I care about us.\nI got flooded and left the conversation without a map.\nI need a do-over when we’re both less flooded.\nSoft Signal is allowed next time too.",
+          "choices": [
+            {
+              "label": "Choose a next move",
+              "target": 3,
+              "signal": 0,
+              "value": 0
+            },
+            {
+              "label": "Leave now",
+              "target": -2,
+              "signal": 0,
+              "value": 0
+            }
+          ]
+        },
+        {
+          "title": "Body first",
+          "body": "Already flooded. Minimal steps. No essays. Put a hand on something solid if that helps. You do not need to resolve a conflict right now.",
+          "choices": [
+            {
+              "label": "Pause / reschedule",
+              "target": 3,
+              "signal": 0,
+              "value": 0
+            },
+            {
+              "label": "Soft Signal",
+              "target": -2,
+              "signal": 0,
+              "value": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "interest",
+      "title": "Want or Should?",
+      "summary": "Sort want, obligation, fear, and uncertainty. Interest is not consent.",
+      "kind": "interest",
+      "steps": [
+        {
+          "title": "Body want",
+          "body": "Does your body feel pull, warmth, or ease?\nInterest is not consent. Nothing is saved.",
+          "choices": [
+            {
+              "label": "Yes",
+              "target": 1,
+              "signal": 1,
+              "value": 1
+            },
+            {
+              "label": "No",
+              "target": 1,
+              "signal": 1,
+              "value": 0
+            },
+            {
+              "label": "Not sure",
+              "target": 1,
+              "signal": 1,
+              "value": 2
+            }
+          ]
+        },
+        {
+          "title": "Mind want",
+          "body": "Are you curious or interested without needing to prove something?\nInterest is not consent. Nothing is saved.",
+          "choices": [
+            {
+              "label": "Yes",
+              "target": 2,
+              "signal": 2,
+              "value": 1
+            },
+            {
+              "label": "No",
+              "target": 2,
+              "signal": 2,
+              "value": 0
+            },
+            {
+              "label": "Not sure",
+              "target": 2,
+              "signal": 2,
+              "value": 2
+            }
+          ]
+        },
+        {
+          "title": "Should",
+          "body": "Is “I should want this” doing the talking?\nInterest is not consent. Nothing is saved.",
+          "choices": [
+            {
+              "label": "Yes",
+              "target": 3,
+              "signal": 4,
+              "value": 1
+            },
+            {
+              "label": "No",
+              "target": 3,
+              "signal": 4,
+              "value": 0
+            },
+            {
+              "label": "Not sure",
+              "target": 3,
+              "signal": 4,
+              "value": 2
+            }
+          ]
+        },
+        {
+          "title": "Fear if no",
+          "body": "Are you afraid of disappointing someone or being left if you say no?\nInterest is not consent. Nothing is saved.",
+          "choices": [
+            {
+              "label": "Yes",
+              "target": 4,
+              "signal": 8,
+              "value": 1
+            },
+            {
+              "label": "No",
+              "target": 4,
+              "signal": 8,
+              "value": 0
+            },
+            {
+              "label": "Not sure",
+              "target": 4,
+              "signal": 8,
+              "value": 2
+            }
+          ]
+        },
+        {
+          "title": "Flooded",
+          "body": "Are you already flooded, shut down, or unable to tell?\nInterest is not consent. Nothing is saved.",
+          "choices": [
+            {
+              "label": "Yes",
+              "target": 5,
+              "signal": 16,
+              "value": 1
+            },
+            {
+              "label": "No",
+              "target": 5,
+              "signal": 16,
+              "value": 0
+            },
+            {
+              "label": "Not sure",
+              "target": 5,
+              "signal": 16,
+              "value": 2
+            }
+          ]
+        },
+        {
+          "title": "Performing",
+          "body": "Do you suspect you are performing interest for approval?\nInterest is not consent. Nothing is saved.",
+          "choices": [
+            {
+              "label": "Yes",
+              "target": 6,
+              "signal": 32,
+              "value": 1
+            },
+            {
+              "label": "No",
+              "target": 6,
+              "signal": 32,
+              "value": 0
+            },
+            {
+              "label": "Not sure",
+              "target": 6,
+              "signal": 32,
+              "value": 2
+            }
+          ]
+        },
+        {
+          "title": "Name the signals",
+          "body": "The reading comes from your choices, not a diagnosis or permission.",
+          "choices": [
+            {
+              "label": "Not now / soft no",
+              "target": -1,
+              "signal": 0,
+              "value": 0
+            },
+            {
+              "label": "Pause — decide later",
+              "target": -1,
+              "signal": 0,
+              "value": 0
+            },
+            {
+              "label": "I don’t know yet",
+              "target": -1,
+              "signal": 0,
+              "value": 0
+            },
+            {
+              "label": "Soft Signal",
+              "target": -2,
+              "signal": 0,
+              "value": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "morning",
+      "title": "Morning Cuddle",
+      "summary": "A small negotiation before coffee. Exit is always available.",
+      "kind": "steps",
+      "steps": [
+        {
+          "title": "Morning capacity",
+          "body": "Because nothing says “I love you” like a formalized negotiation before coffee. Prior mornings are not consent.",
+          "choices": [
+            {
+              "label": "Crispy — awake / board meeting",
+              "target": 1,
+              "signal": 0,
+              "value": 0,
+              "navigation": false
+            },
+            {
+              "label": "Toasty — cozy",
+              "target": 1,
+              "signal": 0,
+              "value": 0,
+              "navigation": false
+            },
+            {
+              "label": "Gremlin — barely conscious",
+              "target": 1,
+              "signal": 0,
+              "value": 0,
+              "navigation": false
+            },
+            {
+              "label": "Exit Protocol — get up now",
+              "target": -2,
+              "signal": 0,
+              "value": 0,
+              "navigation": false
+            }
+          ],
+          "record": true
+        },
+        {
+          "title": "Duration",
+          "body": "Pick a discussion window, not an obligation to remain. Bathroom needs always outrank the blanket constitution.",
+          "choices": [
+            {
+              "label": "Micro (2–5 minutes)",
+              "target": 2,
+              "signal": 0,
+              "value": 0,
+              "navigation": false
+            },
+            {
+              "label": "Standard (8–15 minutes)",
+              "target": 2,
+              "signal": 0,
+              "value": 0,
+              "navigation": false
+            },
+            {
+              "label": "Extended (20+ minutes)",
+              "target": 2,
+              "signal": 0,
+              "value": 0,
+              "navigation": false
+            },
+            {
+              "label": "No time commitment",
+              "target": 2,
+              "signal": 0,
+              "value": 0,
+              "navigation": false
+            }
+          ],
+          "record": true
+        },
+        {
+          "title": "Morning style",
+          "body": "Gentle Hold: Light arm drape, low pressure.\nFull Burrito: Blanket nest, never restraint. Keep an easy exit.\nBack Scritches: Only where specifically requested.\nBig Spoon Safety: Protection with space to leave.\nStarfish Adjacent: Minimal contact, mostly existence confirmation.",
+          "choices": [
+            {
+              "label": "Gentle Hold",
+              "target": 4,
+              "signal": 0,
+              "value": 0,
+              "navigation": false
+            },
+            {
+              "label": "Full Burrito",
+              "target": 4,
+              "signal": 0,
+              "value": 0,
+              "navigation": false
+            },
+            {
+              "label": "Back Scritches",
+              "target": 4,
+              "signal": 0,
+              "value": 0,
+              "navigation": false
+            },
+            {
+              "label": "Big Spoon Safety",
+              "target": 4,
+              "signal": 0,
+              "value": 0,
+              "navigation": false
+            },
+            {
+              "label": "Starfish Adjacent",
+              "target": 4,
+              "signal": 0,
+              "value": 0,
+              "navigation": false
+            },
+            {
+              "label": "More styles",
+              "target": 3,
+              "signal": 0,
+              "value": 0,
+              "navigation": true
+            }
+          ],
+          "record": true
+        },
+        {
+          "title": "Morning style",
+          "body": "Jetpack Mode: Little spoon behind big spoon. Advanced gremlin tech.\nKoala Cling: Front-facing closeness, only if specifically wanted.",
+          "choices": [
+            {
+              "label": "Jetpack Mode",
+              "target": 4,
+              "signal": 0,
+              "value": 0,
+              "navigation": false
+            },
+            {
+              "label": "Koala Cling",
+              "target": 4,
+              "signal": 0,
+              "value": 0,
+              "navigation": false
+            },
+            {
+              "label": "Back to first styles",
+              "target": 2,
+              "signal": 0,
+              "value": 0,
+              "navigation": true
+            }
+          ],
+          "record": true
+        },
+        {
+          "title": "Body boundaries",
+          "body": "Every zone is off limits until the person whose body it is specifically agrees. Hair, stomach, legs, and face-to-face contact each need their own question. A touch map is never permission.",
+          "choices": [
+            {
+              "label": "Company only / no touch",
+              "target": 5,
+              "signal": 0,
+              "value": 0,
+              "navigation": false
+            },
+            {
+              "label": "Discuss each boundary separately",
+              "target": 5,
+              "signal": 0,
+              "value": 0,
+              "navigation": false
+            },
+            {
+              "label": "Not sure — pause",
+              "target": -2,
+              "signal": 0,
+              "value": 0,
+              "navigation": false
+            }
+          ],
+          "record": true
+        },
+        {
+          "title": "Check-in phrase",
+          "body": "Pick language to discuss together. Silence, freezing or uncertainty means pause.",
+          "choices": [
+            {
+              "label": "You good, gremlin?",
+              "target": 6,
+              "signal": 0,
+              "value": 0,
+              "navigation": false
+            },
+            {
+              "label": "Still alive in there?",
+              "target": 6,
+              "signal": 0,
+              "value": 0,
+              "navigation": false
+            },
+            {
+              "label": "Would you like more space?",
+              "target": 6,
+              "signal": 0,
+              "value": 0,
+              "navigation": false
+            },
+            {
+              "label": "Keep check-ins plain and direct",
+              "target": 6,
+              "signal": 0,
+              "value": 0,
+              "navigation": false
+            }
+          ],
+          "record": true
+        },
+        {
+          "title": "Your morning discussion map",
+          "body": "This remembers only choices from this visit. No agreement is inferred. Say the specific ask to the other person; a no, pause, or change of mind ends contact. No timer or warning is armed.",
+          "choices": [
+            {
+              "label": "Finish / leave the room",
+              "target": -1,
+              "signal": 0,
+              "value": 0,
+              "navigation": false
+            },
+            {
+              "label": "Soft Signal",
+              "target": -2,
+              "signal": 0,
+              "value": 0,
+              "navigation": false
+            }
+          ],
+          "record": false
+        }
+      ]
+    },
+    {
+      "id": "spoon",
+      "title": "Spooning",
+      "summary": "A pillow constitution with a free exit.",
+      "kind": "steps",
+      "steps": [
+        {
+          "title": "Role",
+          "body": "Apparently we cannot just cuddle like normal people, so here is the infrastructure. This is your discussion map, never a multi-person agreement.",
+          "choices": [
+            {
+              "label": "Little Spoon",
+              "target": 2,
+              "signal": 0,
+              "value": 0,
+              "navigation": false
+            },
+            {
+              "label": "Care-Seeker Little",
+              "target": 2,
+              "signal": 0,
+              "value": 0,
+              "navigation": false
+            },
+            {
+              "label": "Big Spoon",
+              "target": 2,
+              "signal": 0,
+              "value": 0,
+              "navigation": false
+            },
+            {
+              "label": "Switch",
+              "target": 2,
+              "signal": 0,
+              "value": 0,
+              "navigation": false
+            },
+            {
+              "label": "Parallel Play",
+              "target": 2,
+              "signal": 0,
+              "value": 0,
+              "navigation": false
+            },
+            {
+              "label": "More roles",
+              "target": 1,
+              "signal": 0,
+              "value": 0,
+              "navigation": true
+            }
+          ],
+          "record": true
+        },
+        {
+          "title": "Role",
+          "body": "Burrito Mode: Blanket nest, never restraint.\nSolo Practice: You, a pillow, and a free exit. No partner required.",
+          "choices": [
+            {
+              "label": "Burrito Mode",
+              "target": 2,
+              "signal": 0,
+              "value": 0,
+              "navigation": false
+            },
+            {
+              "label": "Solo Practice",
+              "target": 2,
+              "signal": 0,
+              "value": 0,
+              "navigation": false
+            },
+            {
+              "label": "Back to first roles",
+              "target": 0,
+              "signal": 0,
+              "value": 0,
+              "navigation": true
+            }
+          ],
+          "record": true
+        },
+        {
+          "title": "Position",
+          "body": "Classic: Side-by-side spoon. Hands are not assumed.\n\nSafety Spoon: Keep an easy, comfortable exit.\n\nSafety Burrito: A blanket nest with an easy exit. No restraint.\n\nBurrito: Comfortable blanket wrap, always easy to leave.\n\nHalf-Nelson of Love: The ridiculous name is not an instruction to restrain. Any chest/arm contact needs explicit agreement; no pressure on breathing or pinning.",
+          "choices": [
+            {
+              "label": "Classic",
+              "target": 5,
+              "signal": 0,
+              "value": 0,
+              "navigation": false
+            },
+            {
+              "label": "Safety Spoon",
+              "target": 5,
+              "signal": 0,
+              "value": 0,
+              "navigation": false
+            },
+            {
+              "label": "Safety Burrito",
+              "target": 5,
+              "signal": 0,
+              "value": 0,
+              "navigation": false
+            },
+            {
+              "label": "Burrito",
+              "target": 5,
+              "signal": 0,
+              "value": 0,
+              "navigation": false
+            },
+            {
+              "label": "Half-Nelson of Love",
+              "target": 5,
+              "signal": 0,
+              "value": 0,
+              "navigation": false
+            },
+            {
+              "label": "More positions",
+              "target": 3,
+              "signal": 0,
+              "value": 0,
+              "navigation": true
+            }
+          ],
+          "record": true
+        },
+        {
+          "title": "Position",
+          "body": "Cthulhu: Entanglement as a joke, never a lock. Everyone can leave.\n\nDistance Spoon: Back-to-back, space first. Any contact still needs asking.\n\nJetpack Mode: Little behind big. Advanced gremlin tech, with a free exit.\n\nKoala Death Grip: High-contact comedy, not a literal grip. No restraint; chest/face contact needs separate agreement.\n\nStarfish Adjacent: Minimal contact, mostly existence confirmation.",
+          "choices": [
+            {
+              "label": "Cthulhu",
+              "target": 5,
+              "signal": 0,
+              "value": 0,
+              "navigation": false
+            },
+            {
+              "label": "Distance Spoon",
+              "target": 5,
+              "signal": 0,
+              "value": 0,
+              "navigation": false
+            },
+            {
+              "label": "Jetpack Mode",
+              "target": 5,
+              "signal": 0,
+              "value": 0,
+              "navigation": false
+            },
+            {
+              "label": "Koala Death Grip",
+              "target": 5,
+              "signal": 0,
+              "value": 0,
+              "navigation": false
+            },
+            {
+              "label": "Starfish Adjacent",
+              "target": 5,
+              "signal": 0,
+              "value": 0,
+              "navigation": false
+            },
+            {
+              "label": "More positions",
+              "target": 4,
+              "signal": 0,
+              "value": 0,
+              "navigation": true
+            }
+          ],
+          "record": true
+        },
+        {
+          "title": "Position",
+          "body": "Lap Nest: Discuss head, lap, and torso boundaries specifically.\n\nBackpack of Love: Resting near someone, not making them support unwanted weight.\n\nFortress of Solitude: Pillows and personal space. Touch point entirely optional.\n\nCustom Chaos: Name the shape out loud. No free-text answer is recorded here.",
+          "choices": [
+            {
+              "label": "Lap Nest",
+              "target": 5,
+              "signal": 0,
+              "value": 0,
+              "navigation": false
+            },
+            {
+              "label": "Backpack of Love",
+              "target": 5,
+              "signal": 0,
+              "value": 0,
+              "navigation": false
+            },
+            {
+              "label": "Fortress of Solitude",
+              "target": 5,
+              "signal": 0,
+              "value": 0,
+              "navigation": false
+            },
+            {
+              "label": "Custom Chaos",
+              "target": 5,
+              "signal": 0,
+              "value": 0,
+              "navigation": false
+            },
+            {
+              "label": "Back to first positions",
+              "target": 2,
+              "signal": 0,
+              "value": 0,
+              "navigation": true
+            }
+          ],
+          "record": true
+        },
+        {
+          "title": "Pressure",
+          "body": "Name it, do not infer it from a position or a prior visit. Pressure is always revocable.",
+          "choices": [
+            {
+              "label": "Feather — barely there",
+              "target": 6,
+              "signal": 0,
+              "value": 0,
+              "navigation": false
+            },
+            {
+              "label": "Gentle — soft, no crushing",
+              "target": 6,
+              "signal": 0,
+              "value": 0,
+              "navigation": false
+            },
+            {
+              "label": "Firm — only if specifically wanted",
+              "target": 6,
+              "signal": 0,
+              "value": 0,
+              "navigation": false
+            },
+            {
+              "label": "Held together — discuss what that means",
+              "target": 6,
+              "signal": 0,
+              "value": 0,
+              "navigation": false
+            },
+            {
+              "label": "No touch / pressure",
+              "target": 6,
+              "signal": 0,
+              "value": 0,
+              "navigation": false
+            }
+          ],
+          "record": true
+        },
+        {
+          "title": "Energy",
+          "body": "Pick words to discuss, not a demand that another person perform them.",
+          "choices": [
+            {
+              "label": "Cozy silence",
+              "target": 7,
+              "signal": 0,
+              "value": 0,
+              "navigation": false
+            },
+            {
+              "label": "Soft talk",
+              "target": 7,
+              "signal": 0,
+              "value": 0,
+              "navigation": false
+            },
+            {
+              "label": "Affection — ask each time",
+              "target": 7,
+              "signal": 0,
+              "value": 0,
+              "navigation": false
+            },
+            {
+              "label": "Playful",
+              "target": 7,
+              "signal": 0,
+              "value": 0,
+              "navigation": false
+            },
+            {
+              "label": "Heavy / sad — no fixing required",
+              "target": 7,
+              "signal": 0,
+              "value": 0,
+              "navigation": false
+            },
+            {
+              "label": "Reassurance needed",
+              "target": 7,
+              "signal": 0,
+              "value": 0,
+              "navigation": false
+            }
+          ],
+          "record": true
+        },
+        {
+          "title": "Duration",
+          "body": "A suggestion for talking about time. Leaving early never requires an explanation. This app does not arm a timer.",
+          "choices": [
+            {
+              "label": "5 minutes",
+              "target": 8,
+              "signal": 0,
+              "value": 0,
+              "navigation": false
+            },
+            {
+              "label": "15 minutes",
+              "target": 8,
+              "signal": 0,
+              "value": 0,
+              "navigation": false
+            },
+            {
+              "label": "30 minutes",
+              "target": 8,
+              "signal": 0,
+              "value": 0,
+              "navigation": false
+            },
+            {
+              "label": "45 minutes",
+              "target": 8,
+              "signal": 0,
+              "value": 0,
+              "navigation": false
+            },
+            {
+              "label": "Until hot, bathroom, or simply done",
+              "target": 8,
+              "signal": 0,
+              "value": 0,
+              "navigation": false
+            }
+          ],
+          "record": true
+        },
+        {
+          "title": "Body boundaries",
+          "body": "Back, waist, hair, arms, hands, chest and face are separate questions. Nothing starts as allowed. A map, preference, or saved theme cannot grant permission.",
+          "choices": [
+            {
+              "label": "Company only / all touch off limits",
+              "target": 9,
+              "signal": 0,
+              "value": 0,
+              "navigation": false
+            },
+            {
+              "label": "Discuss every contact point separately",
+              "target": 9,
+              "signal": 0,
+              "value": 0,
+              "navigation": false
+            },
+            {
+              "label": "Not sure — pause",
+              "target": -2,
+              "signal": 0,
+              "value": 0,
+              "navigation": false
+            }
+          ],
+          "record": true
+        },
+        {
+          "title": "Check-in phrase",
+          "body": "Ask about capacity and listen. Reassurance is an invitation, never an obligation.",
+          "choices": [
+            {
+              "label": "You good?",
+              "target": 10,
+              "signal": 0,
+              "value": 0,
+              "navigation": false
+            },
+            {
+              "label": "Need space?",
+              "target": 10,
+              "signal": 0,
+              "value": 0,
+              "navigation": false
+            },
+            {
+              "label": "More hold?",
+              "target": 10,
+              "signal": 0,
+              "value": 0,
+              "navigation": true
+            },
+            {
+              "label": "Still wanted?",
+              "target": 10,
+              "signal": 0,
+              "value": 0,
+              "navigation": false
+            },
+            {
+              "label": "A phrase we choose out loud",
+              "target": 10,
+              "signal": 0,
+              "value": 0,
+              "navigation": false
+            }
+          ],
+          "record": true
+        },
+        {
+          "title": "Reassurance",
+          "body": "You are allowed to need this.\nNeeding hold is not the same as being broken.\nYou do not have to perform grateful to keep this.\nA no, pause, or exit is always allowed.",
+          "choices": [
+            {
+              "label": "Keep these words in the discussion map",
+              "target": 11,
+              "signal": 0,
+              "value": 0,
+              "navigation": false
+            },
+            {
+              "label": "Skip reassurance",
+              "target": 11,
+              "signal": 0,
+              "value": 0,
+              "navigation": false
+            }
+          ],
+          "record": true
+        },
+        {
+          "title": "Your spooning discussion map",
+          "body": "These are your choices for this visit, not another person’s agreement. Ask specifically; release immediately when asked. Aftercare is optional. Nothing is saved.",
+          "choices": [
+            {
+              "label": "Finish / leave the room",
+              "target": -1,
+              "signal": 0,
+              "value": 0,
+              "navigation": false
+            },
+            {
+              "label": "Soft Signal",
+              "target": -2,
+              "signal": 0,
+              "value": 0,
+              "navigation": false
+            }
+          ],
+          "record": false
+        }
+      ]
+    },
+    {
+      "id": "too-much",
+      "title": "I’m Too Much",
+      "summary": "A room for the abandonment alarm. No performance required.",
+      "kind": "steps",
+      "steps": [
+        {
+          "title": "Alarm, not verdict",
+          "body": "The alarm is loud. That does not make you unlovable. You do not have to settle the entire relationship right now.",
+          "choices": []
+        },
+        {
+          "title": "One body need",
+          "body": "Water, blanket, food, quiet, or something solid. Pick one or skip. No score.",
+          "choices": []
+        },
+        {
+          "title": "Give the message a little space",
+          "body": "You can wait before asking another person to hold the whole spiral. Wanting reassurance is not a crime.",
+          "choices": []
+        },
+        {
+          "title": "A smaller ask, later",
+          "body": "“Do you have capacity for a little reassurance?” Their capacity and your worth are different things. Nothing is sent from this app.",
+          "choices": []
+        }
+      ]
+    },
+    {
+      "id": "parallel",
+      "title": "Parallel Play",
+      "summary": "Closeness without a touch tax. Connection is not output.",
+      "kind": "steps",
+      "steps": [
+        {
+          "title": "Choose ordinary company",
+          "body": "No touch is assumed. Check that the other person wants company. Choosing a mode here is not their agreement.",
+          "choices": [
+            {
+              "label": "Same-room silence",
+              "target": 1,
+              "signal": 0,
+              "value": 0
+            },
+            {
+              "label": "Shared media",
+              "target": 2,
+              "signal": 0,
+              "value": 0
+            },
+            {
+              "label": "Side-by-side work",
+              "target": 3,
+              "signal": 0,
+              "value": 0
+            },
+            {
+              "label": "Tea / water",
+              "target": 4,
+              "signal": 0,
+              "value": 0
+            },
+            {
+              "label": "Parallel walk",
+              "target": 5,
+              "signal": 0,
+              "value": 0
+            },
+            {
+              "label": "Reading corner",
+              "target": 6,
+              "signal": 0,
+              "value": 0
+            }
+          ]
+        },
+        {
+          "title": "Same-room silence",
+          "body": "Bodies in one space. No obligatory talk. No obligatory touch.\n\nEntry: Sit. Soft Signal free. No agenda sentence required.\n\nExit: One optional word of thanks — or leave in peace.",
+          "choices": [
+            {
+              "label": "Leave in peace",
+              "target": -1,
+              "signal": 0,
+              "value": 0
+            },
+            {
+              "label": "Soft Signal",
+              "target": -2,
+              "signal": 0,
+              "value": 0
+            }
+          ]
+        },
+        {
+          "title": "Shared media",
+          "body": "Show / music / game — parallel attention.\n\nEntry: Pick media. Confirm Soft Signal free. Press play without performance.\n\nExit: Stop when capacity ends. No spoilers-as-bond tax.",
+          "choices": [
+            {
+              "label": "Leave in peace",
+              "target": -1,
+              "signal": 0,
+              "value": 0
+            },
+            {
+              "label": "Soft Signal",
+              "target": -2,
+              "signal": 0,
+              "value": 0
+            }
+          ]
+        },
+        {
+          "title": "Side-by-side work",
+          "body": "Laptops / books. Presence without performance.\n\nEntry: State: I am here. Soft Signal free. Work is not a test.\n\nExit: Close laptop without apology for unfinished tasks.",
+          "choices": [
+            {
+              "label": "Leave in peace",
+              "target": -1,
+              "signal": 0,
+              "value": 0
+            },
+            {
+              "label": "Soft Signal",
+              "target": -2,
+              "signal": 0,
+              "value": 0
+            }
+          ]
+        },
+        {
+          "title": "Tea / water",
+          "body": "Shared drink. Minimal words. Sacred ordinary.\n\nEntry: Make or pour. Sit. Touch not required.\n\nExit: Empty cup. No forced debrief.",
+          "choices": [
+            {
+              "label": "Leave in peace",
+              "target": -1,
+              "signal": 0,
+              "value": 0
+            },
+            {
+              "label": "Soft Signal",
+              "target": -2,
+              "signal": 0,
+              "value": 0
+            }
+          ]
+        },
+        {
+          "title": "Parallel walk",
+          "body": "Side-by-side movement. Talk optional.\n\nEntry: Pick direction. Soft Signal free to turn around anytime.\n\nExit: Arrive or part without making distance a verdict.",
+          "choices": [
+            {
+              "label": "Leave in peace",
+              "target": -1,
+              "signal": 0,
+              "value": 0
+            },
+            {
+              "label": "Soft Signal",
+              "target": -2,
+              "signal": 0,
+              "value": 0
+            }
+          ]
+        },
+        {
+          "title": "Reading corner",
+          "body": "Separate books, shared air.\n\nEntry: Open books. No quiz later.\n\nExit: Close books. Optional one-line share — not required.",
+          "choices": [
+            {
+              "label": "Leave in peace",
+              "target": -1,
+              "signal": 0,
+              "value": 0
+            },
+            {
+              "label": "Soft Signal",
+              "target": -2,
+              "signal": 0,
+              "value": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "aftercare",
+      "title": "Aftercare",
+      "summary": "Land the plane. No partner tax or forced debrief.",
+      "kind": "steps",
+      "steps": [
+        {
+          "title": "What are you landing from?",
+          "body": "Soft Signal free — aftercare is not a trap.",
+          "choices": [
+            {
+              "label": "After closeness",
+              "target": 1,
+              "signal": 0,
+              "value": 0
+            },
+            {
+              "label": "After conflict",
+              "target": 2,
+              "signal": 0,
+              "value": 0
+            },
+            {
+              "label": "After flood",
+              "target": 3,
+              "signal": 0,
+              "value": 0
+            },
+            {
+              "label": "After a good thing",
+              "target": 4,
+              "signal": 0,
+              "value": 0
+            },
+            {
+              "label": "After a build spiral",
+              "target": 5,
+              "signal": 0,
+              "value": 0
+            }
+          ]
+        },
+        {
+          "title": "After closeness",
+          "body": "Water / bathroom / blanket without apology.\nOne sentence of what felt good, or skip.\nName capacity for more talk: now, later, not today.\nExit without making distance a verdict.",
+          "choices": [
+            {
+              "label": "Land here / done",
+              "target": -1,
+              "signal": 0,
+              "value": 0
+            },
+            {
+              "label": "Soft Signal",
+              "target": -2,
+              "signal": 0,
+              "value": 0
+            }
+          ]
+        },
+        {
+          "title": "After conflict",
+          "body": "No forced postmortem.\nFeet on floor. One care sentence or silence — both valid.\nIf still flooded: pause, not more essays.\nArrange repair later if you both want it.",
+          "choices": [
+            {
+              "label": "Land here / done",
+              "target": -1,
+              "signal": 0,
+              "value": 0
+            },
+            {
+              "label": "Soft Signal",
+              "target": -2,
+              "signal": 0,
+              "value": 0
+            }
+          ]
+        },
+        {
+          "title": "After flood",
+          "body": "You already survived the peak.\nWater, food, quiet — pick one.\nNo processing essay required.\nIntensity is not unlovable.",
+          "choices": [
+            {
+              "label": "Land here / done",
+              "target": -1,
+              "signal": 0,
+              "value": 0
+            },
+            {
+              "label": "Soft Signal",
+              "target": -2,
+              "signal": 0,
+              "value": 0
+            }
+          ]
+        },
+        {
+          "title": "After a good thing",
+          "body": "Let the good land without immediately auditing it.\nOne optional gratitude sentence to yourself.\nRest is allowed after joy.",
+          "choices": [
+            {
+              "label": "Land here / done",
+              "target": -1,
+              "signal": 0,
+              "value": 0
+            },
+            {
+              "label": "Soft Signal",
+              "target": -2,
+              "signal": 0,
+              "value": 0
+            }
+          ]
+        },
+        {
+          "title": "After a build spiral",
+          "body": "Soft Signal free from the cathedral too.\nClose the laptop on purpose for a little while.\nBuilding was containment, not failure.\nOne non-code need: water, walk, stretch, food.",
+          "choices": [
+            {
+              "label": "Land here / done",
+              "target": -1,
+              "signal": 0,
+              "value": 0
+            },
+            {
+              "label": "Soft Signal",
+              "target": -2,
+              "signal": 0,
+              "value": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "repair",
+      "title": "Soft Return",
+      "summary": "A short repair script, without demanding an answer.",
+      "kind": "steps",
+      "steps": [
+        {
+          "title": "I’m back",
+          "body": "I care about us. I need a do-over when we’re both less flooded. You do not have to answer right now.",
+          "choices": []
+        },
+        {
+          "title": "Capacity before the conversation",
+          "body": "Would now, later, or not today work for talking? A pause is allowed. This app sends nothing.",
+          "choices": []
+        },
+        {
+          "title": "Leave a free exit",
+          "body": "Soft Signal is allowed next time too. Returning does not create an obligation to continue.",
+          "choices": []
+        }
+      ]
+    }
+  ]
+}

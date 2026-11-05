@@ -1,0 +1,4 @@
+usr/lib/libcuddle.so
+usr/lib/*/pkgconfig/cuddle.pc
+usr/include/cuddle.h
+usr/include/cuddle-plugin.h

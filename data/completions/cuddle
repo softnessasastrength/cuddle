@@ -1,0 +1,8 @@
+# bash completion for cuddle; static option names only.
+_cuddle()
+{
+    local cur
+    cur=${COMP_WORDS[COMP_CWORD]}
+    COMPREPLY=( $(compgen -W '--soft --hub --tui --gui --guide --map --stop --morning --spoon --hold --too-much --flood --aftercare --parallel --touch --help --rooms --room --conflict --interest --repair --version' -- "$cur") )
+}
+complete -F _cuddle cuddle

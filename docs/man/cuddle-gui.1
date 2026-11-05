@@ -1,0 +1,24 @@
+.TH CUDDLE-GUI 1 "2026-11-04" "cuddle 1.3.0" "User Commands"
+.SH NAME
+cuddle-gui \- offline Litmo room hub
+.SH SYNOPSIS
+.B cuddle-gui
+.RI [ --help | --version ]
+.SH DESCRIPTION
+GTK4 and Qt6 builds offer the shared libcuddle rooms, including touch mapping,
+conflict practice, want-or-should questions, flood, morning and aftercare.
+The HTML backend remains a local Soft Signal STOP page.
+.SH CONTROLS
+Use the mouse or keyboard to select rooms and choices.
+q or Escape stops immediately. Stopped sessions never resume automatically.
+Larger, quieter view increases text size. No answers are stored or sent.
+.SH SEE ALSO
+.BR cuddle (1),
+.BR cuddle-tui (1)
+
+.SH PREFERENCES
+The GTK Preferences screen (Ctrl+comma) previews display settings.
+Save preferences explicitly writes appearance, text size, theme and starting
+room only. Back to rooms discards an unsaved preview. Room answers are never
+saved. Opening Preferences ends the current room.
+Alt+Home returns to rooms; Alt+Left goes back a step; Page Up/Down scrolls.

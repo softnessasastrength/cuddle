@@ -1,0 +1,121 @@
+.TH CUDDLE 1 "September 2026" "cuddle 1.3.0" "User Commands"
+.SH NAME
+cuddle \- a private, consent-first guide and lo-fi Litmo containment hub
+.SH SYNOPSIS
+.B cuddle
+[\fB\-\-soft\fR]
+[\fB\-\-hub\fR]
+[\fB\-\-tui\fR [\fIflood\fR|\fItouch\fR|\fIsignal\fR]]
+[\fB\-\-gui\fR]
+[\fB\-\-guide\fR]
+[\fB\-\-map\fR]
+[\fB\-\-stop\fR]
+[\fB\-\-morning\fR]
+[\fB\-\-spoon\fR]
+[\fB\-\-hold\fR]
+[\fB\-\-too\-much\fR]
+[\fB\-\-flood\fR]
+[\fB\-\-aftercare\fR]
+[\fB\-\-parallel\fR]
+[\fB\-\-touch\fR]
+[\fB\-\-help\fR]
+.SH DESCRIPTION
+.B cuddle
+is a small local companion for consent-first connection and a lo-fi
+terminal cut of Litmo containment protocols. With no option it prints a
+short invitation to presence. It does not network, log, write files, or
+retain answers.
+.PP
+.B q
+is Soft Signal in every interactive flow: stop immediately, no
+explanation, no penalty. Stopping safely is success.
+.PP
+The original interactive guide (\fB\-\-guide\fR) offers branches for
+identifying needs, asking for affection or support, setting boundaries,
+uncertainty, and opting out. The bash hub (\fB\-\-hub\fR) lists protocols
+as numbered menus. The TUI (\fB\-\-tui\fR) adds cathedral chrome, a
+huge-type flood screen, and a Touch Language body map. \fB\-\-gui\fR
+opens a local HTML Soft Signal Stop button.
+.PP
+Touch Language is a map, never consent to touch. Completing a protocol
+does not mean anyone is fixed, healed, or ready.
+.SH OPTIONS
+.TP
+.B \-\-soft, \-s
+Print the original longer note.
+.TP
+.B \-\-hub, \-\-cathedral
+Open the bash containment hub. Exits with an error when standard input
+or output is not a terminal.
+.TP
+.B \-\-tui [\fIflood\fR|\fItouch\fR|\fIsignal\fR]
+Open the curses TUI. Default screen is the hub. Requires python3.
+.B q
+is Soft Signal. Touch Language is never consent.
+.TP
+.B \-\-gui, \-\-stop\-gui
+Open the local HTML Soft Signal Stop button in a browser. No network.
+.TP
+.B \-\-guide, \-g
+Open the original consent-first guide.
+.TP
+.B \-\-map, \-\-ritual
+First ritual: the map, not the mirror.
+.TP
+.B \-\-stop, \-\-soft\-signal
+Practice firing Soft Signal.
+.TP
+.B \-\-morning
+Morning Cuddle Protocol.
+.TP
+.B \-\-spoon
+Spooning Protocol.
+.TP
+.B \-\-hold, \-\-not\-ready
+I'm Not Ready To Get Up Yet.
+.TP
+.B \-\-too\-much
+I'm Too Much / Fear of Abandonment panic room.
+.TP
+.B \-\-flood
+Flood Protocol — when language is gone.
+.TP
+.B \-\-aftercare
+Aftercare Protocol.
+.TP
+.B \-\-parallel
+Parallel play — closeness without a touch tax.
+.TP
+.B \-\-touch
+Touch Language primer. Never consent.
+.TP
+.B \-\-help, \-h
+Print usage information.
+.TP
+.B \-\-version, \-V
+Print the installed version.
+.SH PRIVACY
+All guide state exists only in the current process. The program makes no
+network calls and creates no files.
+.SH NOTES
+This tool is not therapy, relationship advice, or a substitute for emergency
+help. In immediate danger, contact local emergency services or a trusted person
+nearby.
+.SH SEE ALSO
+.BR cuddle-tui (1),
+.BR cuddle-gui (1)
+.SH AUTHOR
+Softness as Strength
+
+.SH SHARED LITMO ROOMS
+.TP
+.B --rooms
+List offline room IDs and descriptions.
+.TP
+.B --room ID
+Open a room in the terminal. Includes conflict, interest, morning, parallel,
+aftercare, repair, flood, touch, spoon and too-much.
+.TP
+.B --conflict, --interest, --repair
+Shortcuts for conflict practice, want-or-should questions and soft return.
+State is held only in memory and cleared on stop. Interest is never consent.
